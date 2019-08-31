@@ -3,8 +3,11 @@ import unicodedata
 from PIL import Image, ImageDraw, ImageFont
 
 args = sys.argv
-text = args[1]
+if len(args) < 2:
+  print("usage:", args[0], "message")
+  sys.exit()
 
+text = args[1]
 if len(text) < 1:
   print("usage:", args[0], "message")
   sys.exit()
